@@ -68,17 +68,10 @@
       pays:[
         {
           date: `24/12/94`,
-          pay: 4000,
-          payToCap: 120,
-          Int: 20,
-          total: 3235
-        },
-        {
-          date: `24/12/94`,
-          pay: 4000,
-          payToCap: 120,
-          Int: 20,
-          total: 3235
+          pay: 4800,
+          payToCap: 2880,
+          Int: 1920,
+          total: 31680
         }
       ]
     }),

@@ -10,7 +10,7 @@
                 <v-divider></v-divider>
                 <v-stepper-step :complete="step > 2" step="2">Validación</v-stepper-step>
                 <v-divider></v-divider>
-                <v-stepper-step step="3">Resultado</v-stepper-step>
+                <v-stepper-step step="3" :complete="step > 3">Resultado</v-stepper-step>
                  <v-divider></v-divider>
                 <v-stepper-step step="4">Pluggin</v-stepper-step>
               </v-stepper-header>
@@ -27,6 +27,10 @@
                 <v-stepper-content step="3">
                   <ValidateResult :result="true"></ValidateResult>
                 </v-stepper-content>
+
+                <v-stepper-content step="4">
+                  <InstallPlug></InstallPlug>
+                </v-stepper-content>
               </v-stepper-items>
             </v-stepper>
           </v-col>
@@ -40,11 +44,14 @@
 import CreateUserForm from '../components/CreateUserForm.vue'
 import ValidateUserPays from '../components/ValidateUserPays.vue'
 import ValidateResult from '../components/ValidateResult'
+import InstallPlug from '../components/installPlugging'
+
   export default {
     components:{
         CreateUserForm,
         ValidateUserPays,
-        ValidateResult
+        ValidateResult,
+        InstallPlug
     },
     data: () => ({}),
     computed:{

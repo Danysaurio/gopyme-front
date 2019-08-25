@@ -17,7 +17,7 @@
                         <v-text-field label="Nombre de la empresa" name="companyName" prepend-icon="fa-building"
                             type="text" v-model="form.companyName"></v-text-field>
                         <v-text-field label="Sitio Web" name="sw" prepend-icon="fa-globe" type="text" v-model="form.sw" ></v-text-field>
-                        <v-text-field id="password" label="Password" name="password" prepend-icon="fa-lock"
+                        <v-text-field id="password" label="Contraseña" name="password" prepend-icon="fa-lock"
                             type="password" v-model="form.password"></v-text-field>
                     </v-col>
                 </v-row>
@@ -70,15 +70,20 @@ export default {
              axios.post('http://a0c694a9.ngrok.io/user', 
                 {
                     name: this.form.name,
-                    mail: this.form.mail,
+                    email: this.form.mail,
                     rfc: this.form.rfc,
                     campanyName: this.form.campanyName,
                     sw: this.form.sw,
                     password: this.form.password
                 }
             ).then(res=>{
-                this.$set(this.$store.state, 'step', 2)
+                if(res.data.access_token){
+                    localStorage.setItem("token", res.data.access_token);                    
+                    const dataUser = JSON.stringify(res.data.user)
+                    localStorage.setItem("user", dataUser);
+                }
                 this.$swal('Registro exitoso','','success');
+                this.$set(this.$store.state, 'step', 2)
            
             }).catch(err=>{
                 this.$swal('Algo salio mal intenta mas tarde','','error');

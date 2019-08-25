@@ -5,7 +5,7 @@
         </v-toolbar>
         <v-card-text>
             <p class="text-center">
-                Para validar la viabilidad del prestamo nesecitamos revisar tus estados de cuenta
+                Para validar la viabilidad del préstamo resucitamos revisar tus estados de cuenta
                 en PayPal no te preocupes <b>ninguna de tus llaves quedara guardada</b> en ninguna parte 
                 solo las utilizaremos una sola vez
             </p>
@@ -70,6 +70,7 @@ export default {
             if(user){
                 user = JSON.parse(user)
             }
+            
             if(!user.email) return;
 
             this.$swal({
@@ -80,6 +81,17 @@ export default {
                     this.$swal.showLoading()
                 },
                 onClose: () => {
+                    this.$set(this.$store.state, 'step', 3)
+                    const paymentsRes = {
+                        "payments": 4800,
+                        "interestPerMounth": 19200,
+                        "capitalPerMount": 28800,
+                        "capitalAprobe": 345600,
+                        "interestTotal": 230400,
+                        "id": 2
+                    }
+                    this.$set(this.$store.state, 'payments', paymentsRes);
+                    /*
                     axios.post('http://a0c694a9.ngrok.io/paypal', 
                         {  
                             clientid: "AdaZ7LqinnLXSwlZJzTFvs5JWq1J7GycWfwsODpKG5E6vzIkr6E7eIidw8fiXqQaiOeoPA5HCrSQbi1K",
@@ -90,13 +102,12 @@ export default {
                     )
                     .then( (response)=> {
                         const {data} = response;
-                        this.$set(this.$store.state, 'step', 3)
-                        this.$set(this.$store.state, 'payments', data);
+                     
                         
                     })
                     .catch( (error) =>{
                         console.log(error)
-                    });
+                    });*/
                 }
             });
          

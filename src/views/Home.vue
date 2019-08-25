@@ -5,11 +5,11 @@
       <v-row align="center" justify="center">
         <div class="display-3 text-center ">
           <div class="banner-title">
-            ¿Necesitas un prestamo <br> para tu negocio?
+            ¿Necesitas un préstamo <br> para tu negocio?
           </div>
           <div>
             <v-btn href="/pymeinit" color="primary">
-              <span class="mr-2">Solicitar Credito</span>
+              <span class="mr-2">Solicitar Crédito</span>
             </v-btn>
           </div>
         </div>
@@ -31,7 +31,7 @@
         <v-col class="text-center" cols="3">
           <v-icon :size="60" class="mb-5">fa fa-receipt</v-icon>
           <h3 class="primary--text">Pagos automaticos</h3>
-          <p>Los pagos se haran automaticamente conforme vas resiviendo ganancias hasta cubrir la mensualidad</p>
+          <p>Los pagos se harán automáticamente conforme vas recibiendo ganancias hasta cubrir la mensualidad</p>
         </v-col>
       </v-row>
     </v-container>
@@ -66,7 +66,7 @@ export default {
             link: "/login"
           },
           {
-            name: "Solicitar Credito",
+            name: "Solicitar Crédito",
             link: "/login"
           }
         ]

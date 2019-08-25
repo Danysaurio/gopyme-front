@@ -55,7 +55,7 @@ export default {
                 this.alertText = "No puedes dejar ningun campo vacio";
                 return
             }
-            axios.post('http://a0c694a9.ngrok.io/auth/login', 
+            axios.post('http://ec2-54-91-193-72.compute-1.amazonaws.com:3000/auth/login', 
                 {
                     email: `Pinkie.Will85@yahoo.com`,//this.name,
                     password:`dn2TGpvj5gq7OD3`// this.pass

@@ -14,7 +14,7 @@
         <span class="mr-2">Iniciar sesión</span>
       </v-btn>
       <v-btn  href="/pymeinit" color="primary" class="ml-2">
-        <span class="mr-2">Solicitar Credito</span>
+        <span class="mr-2">Solicitar Crédito</span>
       </v-btn>
 
     </v-app-bar>

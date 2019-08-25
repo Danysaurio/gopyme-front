@@ -9,12 +9,17 @@
                 <h4 class="display-1 primary-text teal--text" style="margin-top:10px">
                     {{payments ? '¡Felicidades!': 'Lo sentimos' }}
                 </h4>
-                <p>Tu credito ha sido aprobado por la cantidad de <b>${{payments.capitalAprobe}}</b> <br>y tus pagos mensuales tan solo seran de <b>${{payments.payments}}</b></p>
+                <p>Tu crédito ha sido aprobado por la cantidad de <b>${{payments.capitalAprobe}}</b> <br>y tus pagos mensuales tan solo serán de <b>${{payments.payments}}</b></p>
 
             </div>
         </v-card-text>
+        <p class="text-center">
+            <small>
+                Contrato de servicios
+            </small>
+        </p>
          <v-card-actions class="d-flex justify-center" style="padding-bottom:1.5em;">
-            <v-btn color="primary"> Solicitar prestamo 
+            <v-btn color="primary" @click="nextStep"> Acepto y he leído el contrato 
             </v-btn>
         </v-card-actions>
     </v-card>
@@ -24,6 +29,11 @@
 export default {
     data: () => ({}),
     props:['result'],
+    methods:{
+        nextStep(){
+            this.$set(this.$store.state, 'step', 4)            
+        }
+    },  
     computed:{
         payments(){
             return this.$store.state.payments
