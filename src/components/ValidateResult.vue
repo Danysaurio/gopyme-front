@@ -13,7 +13,7 @@
             </div>
         </v-card-text>
          <v-card-actions class="d-flex justify-center" style="padding-bottom:1.5em;">
-            <v-btn color="teal"> Solicitar prestamo 
+            <v-btn color="primary"> Solicitar prestamo 
             </v-btn>
         </v-card-actions>
     </v-card>

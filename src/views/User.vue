@@ -20,7 +20,7 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Juan Daniel Zavala Casillas</v-toolbar-title>
+      <v-toolbar-title class="primary--text">Juan Daniel Zavala Casillas</v-toolbar-title>
     </v-app-bar>
 
      <v-container class="fill-height" fluid>
@@ -28,11 +28,11 @@
           <v-simple-table class="pays-table" >
             <thead>
               <tr>
-                <th class="text-left">Fecha de pago</th>
-                <th class="text-left">Monto</th>
-                <th class="text-left">Monto a capital</th>
-                <th class="text-left">Interes</th>
-                <th class="text-left">Saldo</th>
+                <th class="text-left primary--text">Fecha de pago</th>
+                <th class="text-left primary--text">Monto</th>
+                <th class="text-left primary--text">Monto a capital</th>
+                <th class="text-left primary--text">Interes</th>
+                <th class="text-left primary--text">Saldo</th>
               </tr>
             </thead>
             <tbody>
@@ -49,7 +49,7 @@
       </v-container>
 
     <v-footer app>
-      <span>&copy; 2019</span>
+      <span class="red--text">&copy; 2019 - Gopyme</span>
     </v-footer>
     </div>
 </template>
@@ -60,6 +60,7 @@
       source: String,
     },
     data: () => ({
+      drawer: null,
       pays:[
         {
           date: `24/12/94`,
@@ -77,6 +78,7 @@
         }
       ]
     })
+
   }
 </script>
 <style lang="scss">

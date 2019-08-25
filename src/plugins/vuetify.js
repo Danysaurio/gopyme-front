@@ -9,8 +9,13 @@ export default new Vuetify({
     iconfont: 'fa',
   },
   theme: {
-    dark: true,
+    dark: false,
     themes: {
+      light: {
+        primary: colors.teal.base, // #E53935
+        secondary: colors.red.lighten4, // #FFCDD2
+        accent: colors.teal.base, // #3F51B5
+      },
       dark: {
         primary: colors.teal.base, // #E53935
         secondary: colors.red.lighten4, // #FFCDD2

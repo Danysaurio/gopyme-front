@@ -7,13 +7,13 @@
         </a>
       </v-toolbar-title>
       <v-spacer></v-spacer> 
-      <v-btn text href="/">
+      <v-btn text href="/" class="ml-2">
         <span class="mr-2">Inicio</span>
       </v-btn>
-      <v-btn text href="/login">
+      <v-btn text href="/login" class="ml-2">
         <span class="mr-2">Iniciar sesión</span>
       </v-btn>
-      <v-btn  href="/pymeinit" color="primary">
+      <v-btn  href="/pymeinit" color="primary" class="ml-2">
         <span class="mr-2">Solicitar Credito</span>
       </v-btn>
 

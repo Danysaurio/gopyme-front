@@ -31,7 +31,7 @@
             </v-form>
         </v-card-text>
         <v-card-actions class="d-flex justify-center" style="padding-bottom:1.5em;">
-            <v-btn color="teal"> Enviar <v-icon right>fa-paper-plane</v-icon>
+            <v-btn color="primary"> Enviar <v-icon right>fa-paper-plane</v-icon>
             </v-btn>
         </v-card-actions>
     </v-card>
