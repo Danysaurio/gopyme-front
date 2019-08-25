@@ -21,6 +21,10 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="primary--text">Juan Daniel Zavala Casillas</v-toolbar-title>
+      <v-spacer></v-spacer> 
+      <v-btn color="red" class="ml-2" @click="logout">
+        <v-icon color="white">fa-sign-out-alt</v-icon>
+      </v-btn>  
     </v-app-bar>
 
      <v-container class="fill-height" fluid>
@@ -77,7 +81,14 @@
           total: 3235
         }
       ]
-    })
+    }),
+    methods:{
+      logout(){
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        this.$router.push('/')
+      }
+    }
 
   }
 </script>

@@ -5,7 +5,7 @@ import about from './views/About.vue'
 
 Vue.use(Router)
 
-export default new Router({
+let router =  new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -37,3 +37,17 @@ export default new Router({
 
   ]
 })
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem("token");
+  if(to.fullPath === '/login'){
+    if(token)
+      next('/user')
+  }
+  if(to.fullPath === '/user'){
+    if(!token)
+      next('/login')
+  }
+  next()
+})
+export default router
+3
