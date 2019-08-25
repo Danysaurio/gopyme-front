@@ -92,7 +92,7 @@ export default {
                     }
                     this.$set(this.$store.state, 'payments', paymentsRes);
                     /*
-                    axios.post('http://a0c694a9.ngrok.io/paypal', 
+                    axios.post('http://ec2-54-167-50-78.compute-1.amazonaws.com:3000//paypal', 
                         {  
                             clientid: "AdaZ7LqinnLXSwlZJzTFvs5JWq1J7GycWfwsODpKG5E6vzIkr6E7eIidw8fiXqQaiOeoPA5HCrSQbi1K",
                             clientsecret: "EKsVEYd49I4V9A-2Jepf1GMDq6wRK-eA-8oKsNSD-o_GFvlfhLqcxgY6EOqzLLWUj1zsBzSJXS6kJ1Tx",

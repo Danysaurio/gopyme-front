@@ -67,7 +67,7 @@ export default {
                     return
                 }
             }
-             axios.post('http://a0c694a9.ngrok.io/user', 
+             axios.post('http://ec2-54-167-50-78.compute-1.amazonaws.com:3000//user', 
                 {
                     name: this.form.name,
                     email: this.form.mail,
