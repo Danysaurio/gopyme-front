@@ -3,7 +3,7 @@
     <v-app-bar app v-if="this.$route.name !== 'user'">
       <v-toolbar-title class="">
         <a href="/">
-          <img src="./assets/logo.svg" alt="" width="50%">
+          <img src="./assets/logo_1.svg" alt="" width="50%">
         </a>
       </v-toolbar-title>
       <v-spacer></v-spacer> 
@@ -38,5 +38,8 @@ export default {
 <style lang="scss">
   html{
     overflow-y: auto !important;
+  }
+  .swal2-container.swal2-shown{
+    font-family: Roboto;
   }
 </style>

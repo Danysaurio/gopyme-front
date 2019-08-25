@@ -53,23 +53,27 @@ export default {
             if(this.name === ""  || this.pass === ""){
                 this.alert = true;
                 this.alertText = "No puedes dejar ningun campo vacio";
+                return
             }
-            axios.post('http://ec2-54-167-50-78.compute-1.amazonaws.com:3000/auth/login', 
+            axios.post('http://a0c694a9.ngrok.io/auth/login', 
                 {
-                    email: this.name,
-                    password: this.pass
+                    email: `Pinkie.Will85@yahoo.com`,//this.name,
+                    password:`dn2TGpvj5gq7OD3`// this.pass
                 }
             )
             .then( (response)=> {
                 const {data} = response;
                 if(data.access_token){
                     localStorage.setItem("token", data.access_token);
-                    localStorage.setItem("user", data.user);
+                    const dataUser = JSON.stringify(data.user)
+                    localStorage.setItem("user", dataUser);
                     this.$router.push('/user')
                 }
             })
-            .catch(function (error) {
-                console.log(error.response);
+            .catch( (error) =>{
+                const {data} = error.response;
+                this.alert = true;
+                this.alertText = data.message;
             });
         }
     }

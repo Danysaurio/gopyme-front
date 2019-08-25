@@ -11,11 +11,13 @@
                 <v-stepper-step :complete="step > 2" step="2">Validación</v-stepper-step>
                 <v-divider></v-divider>
                 <v-stepper-step step="3">Resultado</v-stepper-step>
+                 <v-divider></v-divider>
+                <v-stepper-step step="4">Pluggin</v-stepper-step>
               </v-stepper-header>
               <v-stepper-items>
 
                 <v-stepper-content step="1">
-                  <CreateUserForm></CreateUserForm>
+                  <CreateUserForm :pymeinit="true"></CreateUserForm>
                 </v-stepper-content>
 
                 <v-stepper-content step="2">
@@ -44,8 +46,14 @@ import ValidateResult from '../components/ValidateResult'
         ValidateUserPays,
         ValidateResult
     },
-    data: () => ({
-      step:3
-    }),
+    data: () => ({}),
+    computed:{
+      step(){
+        return this.$store.state.step
+      }
+    },
+    mounted(){
+      
+    }
   }
 </script>

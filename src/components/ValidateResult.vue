@@ -5,11 +5,12 @@
         </v-toolbar>
         <v-card-text>
             <div class="text-center">
-                <v-icon :color="result ? 'teal': 'red'" :size="80">far fa-smile-beam</v-icon>
+                <v-icon :color="payments ? 'teal': 'red'" :size="80">far fa-smile-beam</v-icon>
                 <h4 class="display-1 primary-text teal--text" style="margin-top:10px">
-                    ¡Felicidades!
+                    {{payments ? '¡Felicidades!': 'Lo sentimos' }}
                 </h4>
-                <p>Tu credito ha sido aprobado por la cantidad de <b>$5000</b></p>
+                <p>Tu credito ha sido aprobado por la cantidad de <b>${{payments.capitalAprobe}}</b> <br>y tus pagos mensuales tan solo seran de <b>${{payments.payments}}</b></p>
+
             </div>
         </v-card-text>
          <v-card-actions class="d-flex justify-center" style="padding-bottom:1.5em;">
@@ -22,7 +23,12 @@
 <script>
 export default {
     data: () => ({}),
-    props:['result']
+    props:['result'],
+    computed:{
+        payments(){
+            return this.$store.state.payments
+        }
+    }
 };
 </script>
 <style lang="scss" >
