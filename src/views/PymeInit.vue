@@ -23,12 +23,7 @@
                 </v-stepper-content>
 
                 <v-stepper-content step="3">
-                  <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>
-
-                  <v-btn color="primary" @click="e1 = 1">
-                    Continue
-                  </v-btn>
-                  <v-btn text>Cancel</v-btn>
+                  <ValidateResult :result="true"></ValidateResult>
                 </v-stepper-content>
               </v-stepper-items>
             </v-stepper>
@@ -46,7 +41,8 @@ import ValidateResult from '../components/ValidateResult'
   export default {
     components:{
         CreateUserForm,
-        ValidateUserPays
+        ValidateUserPays,
+        ValidateResult
     },
     data: () => ({
       step:3

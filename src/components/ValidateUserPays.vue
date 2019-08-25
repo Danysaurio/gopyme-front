@@ -11,7 +11,7 @@
             </p>
             <v-form>
                 <div class="d-flex align-center validate-item-box ">
-                    <v-text-field label="Llave 1" name="key-1" prepend-icon="fa-key" type="text"></v-text-field>              
+                    <v-text-field label="clent_id" name="clent_id" prepend-icon="fa-key" type="text"></v-text-field>              
                     <v-tooltip bottom>
                         <template v-slot:activator="{ on }">
                             <v-icon right class="ask-icon" v-on="on">fa-question-circle</v-icon>
@@ -20,7 +20,7 @@
                     </v-tooltip>
                 </div>
                  <div class="d-flex align-center validate-item-box ">
-                    <v-text-field label="Llave 2" name="key-1" prepend-icon="fa-key" type="text"></v-text-field>              
+                    <v-text-field label="clent_secret" name="clent_secret" prepend-icon="fa-key" type="text"></v-text-field>              
                     <v-tooltip bottom>
                         <template v-slot:activator="{ on }">
                             <v-icon right class="ask-icon" v-on="on">fa-question-circle</v-icon>
